@@ -1,4 +1,4 @@
-# AndroidTalkback
+# AndroidTalkback 🥰
 When Talkback is on, it provides spoken feedback so that you can use your device without looking at the screen.
 Talkback is intended for situations or people who have difficulty seeing the screen.
 
@@ -27,3 +27,7 @@ stop.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/8064517/160053297-c448a1f8-5f17-4364-8097-84a699517af6.png" width="350" title="dotrinh">
 </p>
+
+
+# License
+@dotrinh MIT
