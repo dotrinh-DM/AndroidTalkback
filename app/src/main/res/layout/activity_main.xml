@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="wrapper ABC" <-- use this in ConstraintLayout as wrapper, when tapping we can not tap to individual VIEW
+    android:background="#4CAF50"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="100dp"
@@ -13,6 +20,7 @@
         android:layout_marginTop="8dp"
         android:background="@color/teal_700"
         android:text="@string/hello_world_world_world_world"
+        android:contentDescription="@string/hello_world_world_world_world"
         android:textColor="@color/white"
         android:textSize="12sp"
         android:textStyle="bold"
