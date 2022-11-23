@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Android Talkback</string>
-    <string name="hello_world_world_world_world">Hello World World World</string>
+    <string name="hello_text_1">Text 1</string>
     <string name="this_is_handsome">he is gorgeous</string>
     <string name="this_is_handsome_2">he is handsome</string>
     <string name="hidden_content">hidden content</string>
