@@ -14,6 +14,17 @@
         android:contentDescription="CHECK CLICK THROUGH"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:text="layer 1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/checkClickThrough"
+        app:layout_constraintTop_toTopOf="@+id/checkClickThrough"
+        />
 
     <!-- PREVENT CLICK THROUGH-->
     <View
@@ -29,10 +40,22 @@
         app:layout_constraintHeight_percent="0.9" />
 
     <TextView
+        android:id="@+id/header_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:text="layer 2"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/wrapper"
+        app:layout_constraintTop_toTopOf="@+id/wrapper"
+        />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:background="@color/teal_700"
         android:text="text 1 has no content description"
         android:textColor="@color/white"
