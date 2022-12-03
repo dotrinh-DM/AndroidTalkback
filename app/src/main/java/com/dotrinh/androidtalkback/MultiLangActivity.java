@@ -1,12 +1,17 @@
 package com.dotrinh.androidtalkback;
 
+import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dotrinh.androidtalkback.databinding.MultiLangBinding;
+
+import java.util.List;
 
 public class MultiLangActivity extends AppCompatActivity {
 
@@ -29,5 +34,33 @@ public class MultiLangActivity extends AppCompatActivity {
             ctx = LocaleHelper.setLocale(ctx, "ja");
             binding.textView.setText(ctx.getResources().getString(R.string.description));
         });
+        // speak_loud("thank you thank you");
+        speak_loud("ありがとうございます");
+    }
+
+    /**
+     * This method checks if Google Talkback is enabled by using the [accessibilityManager]
+     */
+    public boolean isGoogleTalkbackActive() {
+        AccessibilityManager am = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
+        if (am != null && am.isEnabled()) {
+            List<AccessibilityServiceInfo> serviceInfoList = am.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_SPOKEN);
+            if (!serviceInfoList.isEmpty())
+                return true;
+        }
+        return false;
+    }
+
+    public void speak_loud(String str_speak) {
+        if (isGoogleTalkbackActive()) {
+            AccessibilityManager accessibilityManager = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
+            AccessibilityEvent accessibilityEvent = AccessibilityEvent.obtain();
+            accessibilityEvent.setEventType(AccessibilityEvent.TYPE_ANNOUNCEMENT);
+
+            accessibilityEvent.getText().add(str_speak);
+            if (accessibilityManager != null) {
+                accessibilityManager.sendAccessibilityEvent(accessibilityEvent);
+            }
+        }
     }
 }
