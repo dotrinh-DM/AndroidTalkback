@@ -29,5 +29,11 @@ stop.
 </p>
 
 
+# Important multi-lang support
+Depending on Android version or smartphone maker, some texts will be added automatically by OS.
+
+Ex: button, action available...
+(You can see other app that runs on Android 11, Android 12)
+
 # License
 @dotrinh MIT
