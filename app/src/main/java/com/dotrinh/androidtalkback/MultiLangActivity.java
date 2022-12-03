@@ -23,6 +23,7 @@ public class MultiLangActivity extends AppCompatActivity {
         binding.lang1.setOnClickListener(v -> {
             ctx = LocaleHelper.setLocale(ctx, "en");
             binding.textView.setText(ctx.getResources().getString(R.string.description));
+            // binding.lang2.setText("日本語");
         });
         binding.lang2.setOnClickListener(v -> {
             ctx = LocaleHelper.setLocale(ctx, "ja");

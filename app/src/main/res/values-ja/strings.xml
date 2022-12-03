@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by ninh on 30/08/2022, 16:19
+  ~ Copyright (c) 2022. USE Inc. All rights reserved.
+  -->
+
+<resources>
+    <string name="lang">GL for G2 FOUR</string>
+    <string name="layer1">レイヤ 1</string>
+    <string name="description">デスクリプション</string>
+</resources>
