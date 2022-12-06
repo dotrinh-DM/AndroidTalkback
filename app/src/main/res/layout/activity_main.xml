@@ -65,6 +65,7 @@
         app:layout_constraintTop_toTopOf="@+id/wrapper" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:background="@color/teal_700"
@@ -80,8 +81,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
+        android:layout_width="105dp"
+        android:layout_height="91dp"
         android:contentDescription="@string/this_is_handsome"
         android:src="@drawable/dotrinhlight"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,5 +110,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/teal_700"
+        android:focusable="true"
+        android:text="focus"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
